@@ -33,6 +33,5 @@ public class Flight {
 
     private BigDecimal price;
 
-
-
+    private int baglimit;
 }
