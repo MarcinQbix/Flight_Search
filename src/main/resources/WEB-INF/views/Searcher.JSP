@@ -26,6 +26,14 @@
         </div>
         <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
     </div>
+    <div class="form-group">
+        <label for="dateFrom">Departure from</label>
+        <input type="date" class="form-control" id="dateFrom" name="dateFrom" value="1">
+    </div>
+    <div class="form-group">
+        <label for="dateTo">Arrivial until</label>
+        <input type="date" class="form-control" id="dateTo" name="dateTo" value="2">
+    </div>
 </form>
 </div>
 </body>
