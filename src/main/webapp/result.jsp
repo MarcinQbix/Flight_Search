@@ -7,7 +7,7 @@
     <link href="${pageContext.request.contextPath}/webjars/bootstrap/4.0.0-2/css/bootstrap.css" type="text/css"
           rel="stylesheet">
 </head>
-<body background="pGc1LI.jpg">
+<body background="listbackground.jpg">
 <div class="container mt-4">
     <form action="/flightList" method="post">
         <table class="table table-hover">
