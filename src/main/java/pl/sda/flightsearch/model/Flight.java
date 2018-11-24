@@ -7,12 +7,15 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
+
 @Getter
 @Setter
 public class Flight {
     private String flyTo;
 
-    private String airlines;
+    @JsonProperty("airlines")
+    private List<String> airlines;
 
     @JsonProperty("fly_duration")
     private String flyDuration;
@@ -33,7 +36,4 @@ public class Flight {
     private LocalDate aTimeUTC;
 
     private BigDecimal price;
-
-    private int baglimit;
-
 }
