@@ -14,7 +14,7 @@ import java.time.LocalDate;
 
 @Controller
 public class FlightController {
-    FlightService flightService;
+    private FlightService flightService;
 
     @Autowired
     public FlightController(FlightService flightService) {
