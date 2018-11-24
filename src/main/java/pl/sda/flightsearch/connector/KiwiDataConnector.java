@@ -1,11 +1,13 @@
 package pl.sda.flightsearch.connector;
 
+import org.apache.tomcat.jni.Local;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 @Component
@@ -13,6 +15,7 @@ public class KiwiDataConnector {
     private static final String REQRES_URL = "https://api.skypicker.com/flights";
     private RestTemplate restTemplate;
     private final String parnter="picky";
+    private static final  DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     @Autowired
     public KiwiDataConnector(RestTemplate restTemplate) {
@@ -20,11 +23,14 @@ public class KiwiDataConnector {
     }
 
     public KiwiDataResponse connect(String flyFrom, String flyTo, LocalDate dateFrom, LocalDate dateTo) {
+;
+
+
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(REQRES_URL)
                 .queryParam("flyFrom", flyFrom)
                 .queryParam("to", flyTo)
-                .queryParam("dateFrom", dateFrom)
-                .queryParam("dateTo", dateTo)
+                .queryParam("dateFrom", dateFrom.format(DATE_PATTERN))
+                .queryParam("dateTo", dateTo.format(DATE_PATTERN))
                 .queryParam("partner",parnter);
 
         return restTemplate.getForObject(builder.toUriString(), KiwiDataResponse.class, new HashMap<>());

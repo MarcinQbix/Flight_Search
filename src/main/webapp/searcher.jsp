@@ -17,7 +17,7 @@
 
 <body background="3889f45752d19449f909300bb0b7ad02.jpg">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<form action="/flightlist" method="post">
+<form action="/flightList" method="post">
 <div class="flight-engine">
     <div class="container">
         <div class="tabing">
