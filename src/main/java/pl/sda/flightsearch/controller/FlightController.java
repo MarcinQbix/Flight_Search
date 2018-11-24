@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.sda.flightsearch.model.Flight;
@@ -24,16 +25,16 @@ public class FlightController {
     public String showSearcher(){
         return"searcher";
     }
-//@RequestMapping("/")
-//public String listFlightView(
-//        @RequestParam String flyFrom,
-//        @RequestParam String flyTo,
-//        @RequestParam LocalDate dateFrom,
-//        @RequestParam LocalDate dateTo,
-//Model model
-//        ){
-//    model.addAttribute("flights",flightService.showAllFlights(flyFrom,flyTo,dateFrom,dateTo));
-//    return "flight";
-//}
+@PostMapping("/flightList")
+public String listFlightView(
+        @RequestParam String flyFrom,
+        @RequestParam String flyTo,
+        @RequestParam LocalDate dateFrom,
+        @RequestParam LocalDate dateTo,
+Model model
+        ){
+    model.addAttribute("flights",flightService.showAllFlights(flyFrom,flyTo,dateFrom,dateTo));
+    return "flight";
+}
 
 }
