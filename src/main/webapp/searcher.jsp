@@ -17,9 +17,14 @@
 
 <body background="3889f45752d19449f909300bb0b7ad02.jpg">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<form action="/flightlist" method="post">
 <div class="flight-engine">
     <div class="container">
         <div class="tabing">
+            <div class="inner09" style="display: inline-block;">
+                <label><input type="radio" name="modMainSearchFlightType" checked="checked" id="modMainSearchFlightReturn_radio"> w obie strony</label>
+                <label><input type="radio" name="modMainSearchFlightType" id="modMainSearchFlightOneway_radio"> w jedną stronę</label>
+            </div>
             <div class="tab-content">
                 <div id="1" class="tab1 active">
                     <div class="flight-tab row">
@@ -109,6 +114,6 @@
         <%--</div>--%>
         <%--<button class="btn btn-dark" type="submit">Search! </button>--%>
     <%--</form>--%>
-
+</form>
 </body>
 </html>
