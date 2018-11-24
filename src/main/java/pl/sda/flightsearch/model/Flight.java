@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 @Getter
 @Setter
@@ -19,7 +20,7 @@ public class Flight {
     private String flyFrom;
 
     @JsonProperty("dTimeUTC")
-    private Date dTimeUTC;
+    private LocalDate dTimeUTC;
 
     @JsonProperty("booking_token")
     private String bookingToken;
@@ -29,9 +30,10 @@ public class Flight {
     private String cityFrom;
 
     @JsonProperty("aTimeUTC")
-    private Date aTimeUTC;
+    private LocalDate aTimeUTC;
 
     private BigDecimal price;
 
     private int baglimit;
+
 }

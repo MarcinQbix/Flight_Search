@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 @Getter
 @Setter
@@ -19,7 +20,7 @@ public class FlightDTO {
 
     private String flyFrom;
 
-    private Date dTimeUTC;
+    private LocalDate dTimeUTC;
 
     private String bookingToken;
 
@@ -27,9 +28,11 @@ public class FlightDTO {
 
     private String cityFrom;
 
-    private Date aTimeUTC;
+    private LocalDate aTimeUTC;
 
     private BigDecimal price;
 
     private int baglimit;
+
+
 }
