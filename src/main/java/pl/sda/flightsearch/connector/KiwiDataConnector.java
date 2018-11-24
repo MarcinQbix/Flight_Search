@@ -27,13 +27,13 @@ public class KiwiDataConnector {
 
 
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(REQRES_URL)
-                .queryParam("flyFrom", flyFrom)
-                .queryParam("to", flyTo)
+                .queryParam("flyFrom", flyFrom.toUpperCase())
+                .queryParam("to", flyTo.toUpperCase())
                 .queryParam("dateFrom", dateFrom.format(DATE_PATTERN))
                 .queryParam("dateTo", dateTo.format(DATE_PATTERN))
                 .queryParam("partner",parnter);
 
-        return restTemplate.getForObject(builder.toUriString(), KiwiDataResponse.class, new HashMap<>());
+        return restTemplate.getForObject(builder.toUriString(), KiwiDataResponse.class);
     }
 
 }

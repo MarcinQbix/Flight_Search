@@ -24,6 +24,6 @@ public class FlightService implements IFlightService{
     public List<FlightDTO> showAllFlights(String flyFrom, String flyTo, LocalDate dateFrom, LocalDate dateTo) {
         List<Flight> flights = kiwiDataConnector.connect(flyFrom,flyTo,dateFrom,dateTo).getFlights();
         return flights.stream()
-                .map(b->new FlightDTO(b.getFlyTo(),b.getAirlines(),b.getFlyDuration(),b.getFlyFrom(),b.getDTimeUTC(),b.getBookingToken(),b.getCityTo(),b.getCityFrom(),b.getATimeUTC(),b.getPrice(),b.getBaglimit())).collect(Collectors.toList());
+                .map(b->new FlightDTO(b.getFlyTo(),b.getAirlines(),b.getFlyDuration(),b.getFlyFrom(),b.getDTimeUTC(),b.getBookingToken(),b.getCityTo(),b.getCityFrom(),b.getATimeUTC(),b.getPrice())).collect(Collectors.toList());
     }
 }
