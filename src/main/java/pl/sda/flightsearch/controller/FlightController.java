@@ -34,7 +34,7 @@ public String listFlightView(
 Model model
         ){
     model.addAttribute("flights",flightService.showAllFlights(flyFrom,flyTo,dateFrom,dateTo));
-    return "flight";
+    return "result";
 }
 
 }

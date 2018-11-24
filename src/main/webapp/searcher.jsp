@@ -22,31 +22,35 @@
     <div class="container">
         <div class="tabing">
             <div class="inner09" style="display: inline-block;">
-                <label><input type="radio" name="modMainSearchFlightType" checked="checked" id="modMainSearchFlightReturn_radio"> w obie strony</label>
-                <label><input type="radio" name="modMainSearchFlightType" id="modMainSearchFlightOneway_radio"> w jedną stronę</label>
+                <label><input type="radio"  checked="checked" name="modMainSearchFlightType" id="modMainSearchFlightOneway_radio"> w jedną stronę</label>
+                <label><input type="radio" name="modMainSearchFlightType"id="modMainSearchFlightReturn_radio"> w obie strony</label>
             </div>
             <div class="tab-content">
                 <div id="1" class="tab1 active">
                     <div class="flight-tab row">
                         <div class="persent-one">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <input type="text" name="dep" class="textboxstyle" id="dep" placeholder="From City or airport">
+                            <input type="text"  class="textboxstyle"  name="flyFrom" placeholder="From City or airport">
                         </div>
                         <div class="persent-one">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <input type="text" name="dep" class="textboxstyle" id="arival" placeholder="To City or airport">
+                            <input type="text"  class="textboxstyle"  name="flyTo" placeholder="To City or airport">
+                        </div>
+                        <div class="persent-one less-per" >
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input type="date" name="dateFrom" class="textboxstyle" value="2018-11-24" placeholder="Depart">
                         </div>
                         <div class="persent-one less-per">
                             <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <input type="date" name="dep" class="textboxstyle" id="from-date1" value="2018-11-24" placeholder="Depart">
-                        </div>
-                        <div class="persent-one less-per">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <input type="date" name="dep" class="textboxstyle" id="to-date" placeholder="Returrn">
+                            <input type="date" name="dateTo" class="textboxstyle" placeholder="Returrn">
                         </div>
                         <div class="persent-one">
                             <i class="fa fa-user" aria-hidden="true"></i>
-                            <div class="textboxstyle" id="passenger">01 Passenger</div>
+                            <select class="textboxstyle" name="passangers">
+                                <option selected value="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                            </select>
                         </div>
                         <div class="persent-one less-btn">
                             <input type="Submit" name="submit" value="Search" class="btn btn-info cst-btn" id="srch">
@@ -90,30 +94,6 @@
     </div>
     <!-- tabbing -->
 </div>
-    <%--<form action="/" method="post">--%>
-        <%--<span class="input-group-text purple lighten-3" name=""><i class="fa fa-search text-white"--%>
-                                                               <%--aria-hidden="true"></i></span>--%>
-            <%--<input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="From?">--%>
-
-
-        <%--<div class="input-group md-form form-sm form-1 pl-0">--%>
-            <%--<div class="input-group-prepend">--%>
-    <%--<span class="input-group-text cyan lighten-2" name=""><i class="fa fa-search text-white"--%>
-                                                             <%--aria-hidden="true"></i></span>--%>
-            <%--</div>--%>
-            <%--<input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Where Do You Want to go ?">--%>
-        <%--</div>--%>
-        <%--<div class="form-group">--%>
-            <%--<label for="dateFrom">Departure from</label>--%>
-            <%--<input type="date" class="form-control" id="dateFrom" name="dateFrom" value="1" aria-label="Choose Departure day">--%>
-        <%--</div>--%>
-        <%--<div class="form-group">--%>
-            <%--<label for="dateTo">Arrivial until</label>--%>
-            <%--<input type="date" class="form-control" id="dateTo" name="dateTo" value="2" aria-label="choose Return day">--%>
-            <%--<label for="dateTo">Choose Arivial Date </label>--%>
-        <%--</div>--%>
-        <%--<button class="btn btn-dark" type="submit">Search! </button>--%>
-    <%--</form>--%>
 </form>
 </body>
 </html>
