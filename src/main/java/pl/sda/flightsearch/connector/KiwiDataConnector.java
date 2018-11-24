@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class KiwiDataConnector {
     private static final String REQRES_URL = "https://api.skypicker.com/flights";
     private RestTemplate restTemplate;
-    private String parnter="picky";
+    private final String parnter="picky";
 
     @Autowired
     public KiwiDataConnector(RestTemplate restTemplate) {
