@@ -36,8 +36,8 @@
                     <td>${flight.ATimeUTC}</td>
                     <td>${flight.airlines}</td>
                     <td>${flight.flyDuration}</td>
-                    <td>${flight.price}</td>
-                    <td><input class="form-check-input" type="radio" name="bookId" value="${book.id}" checked></td>
+                    <td>${flight.price} EUR</td>
+                    <td><input class="form-check-input" type="radio" name="flightID" value="${flight}" checked></td>
                 </tr>
             </c:forEach>
             </tbody>

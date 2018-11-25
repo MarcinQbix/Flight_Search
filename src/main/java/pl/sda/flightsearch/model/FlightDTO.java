@@ -22,7 +22,7 @@ public class FlightDTO {
 
     private String flyFrom;
 
-    private LocalDate dTimeUTC;
+    private Date dTimeUTC;
 
     private String bookingToken;
 
@@ -30,7 +30,7 @@ public class FlightDTO {
 
     private String cityFrom;
 
-    private LocalDate aTimeUTC;
+    private Date aTimeUTC;
 
     private BigDecimal price;
 

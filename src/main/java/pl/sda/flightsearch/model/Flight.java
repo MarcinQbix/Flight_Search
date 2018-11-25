@@ -23,7 +23,7 @@ public class Flight {
     private String flyFrom;
 
     @JsonProperty("dTimeUTC")
-    private LocalDate dTimeUTC;
+    private Long dTimeUTC;
 
     @JsonProperty("booking_token")
     private String bookingToken;
@@ -33,7 +33,7 @@ public class Flight {
     private String cityFrom;
 
     @JsonProperty("aTimeUTC")
-    private LocalDate aTimeUTC;
+    private Long aTimeUTC;
 
     private BigDecimal price;
 }
