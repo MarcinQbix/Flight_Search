@@ -7,10 +7,12 @@ import pl.sda.flightsearch.model.Flight;
 import pl.sda.flightsearch.model.FlightDTO;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.stream.Collectors;
 @Service
 public class FlightService implements IFlightService{
@@ -19,8 +21,9 @@ public class FlightService implements IFlightService{
     public FlightService(KiwiDataConnector kiwiDataConnector) {
         this.kiwiDataConnector = kiwiDataConnector;
     }
-private Date paraser(Long timestamp){
-    return new java.util.Date((long)timestamp*1000);
+private LocalDateTime paraser(Long timestamp){
+    return LocalDateTime.ofInstant(Instant.ofEpochSecond(timestamp),
+            TimeZone.getDefault().toZoneId());
 }
 
     @Override
