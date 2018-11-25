@@ -6,28 +6,26 @@ import pl.sda.flightsearch.connector.KiwiDataConnector;
 import pl.sda.flightsearch.model.Flight;
 import pl.sda.flightsearch.model.FlightDTO;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
+
 @Service
-public class FlightService implements IFlightService{
-   private KiwiDataConnector kiwiDataConnector;
-@Autowired
+public class FlightService implements IFlightService {
+    private KiwiDataConnector kiwiDataConnector;
+    Date date = new Date();
+
+    @Autowired
     public FlightService(KiwiDataConnector kiwiDataConnector) {
         this.kiwiDataConnector = kiwiDataConnector;
     }
-private Date paraser(Long timestamp){
-    return new java.util.Date((long)timestamp*1000);
-}
+
 
     @Override
     public List<FlightDTO> showAllFlights(String flyFrom, String flyTo, LocalDate dateFrom, LocalDate dateTo) {
-        List<Flight> flights = kiwiDataConnector.connect(flyFrom,flyTo,dateFrom,dateTo).getFlights();
-
+        List<Flight> flights = kiwiDataConnector.connect(flyFrom, flyTo, dateFrom, dateTo).getFlights();
         return flights.stream()
-                .map(b->new FlightDTO(b.getFlyTo(),b.getAirlines(),b.getFlyDuration(),b.getFlyFrom(),paraser(b.getDTimeUTC()),b.getBookingToken(),b.getCityTo(),b.getCityFrom(),paraser(b.getATimeUTC()),b.getPrice())).collect(Collectors.toList());
+                .map(b -> new FlightDTO(b.getFlyTo(), b.getAirlines(), b.getFlyDuration(), b.getFlyFrom(), b.getDTimeUTC(), b.getBookingToken(), b.getCityTo(), b.getCityFrom(), b.getATimeUTC(), b.getPrice())).collect(Collectors.toList());
     }
 }
