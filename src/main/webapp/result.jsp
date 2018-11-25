@@ -31,9 +31,9 @@
                     <th scope="row">${loop.index + 1}</th>
                     <td>${flight.cityFrom}</td>
                     <td>${flight.cityTo}</td>
-                    <td>${flight.DTimeUTC}</td>
-                    <td>${flight.DTimeUTC}</td>
-                    <td>${flight.ATimeUTC}</td>
+                    <td>${flight.DTimeUTC.date}</td>
+                    <td>${flight.DTimeUTC.time}</td>
+                    <td>${flight.ATimeUTC.time}</td>
                     <td>${flight.airlines}</td>
                     <td>${flight.flyDuration}</td>
                     <td>${flight.price} EUR</td>
