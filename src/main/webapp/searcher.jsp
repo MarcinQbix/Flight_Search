@@ -13,6 +13,8 @@
 <link href="style.css" rel="stylesheet" >
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
 <!------ Include the above in your HEAD tag ---------->
 
 <body background="3889f45752d19449f909300bb0b7ad02.jpg">
@@ -30,11 +32,12 @@
                     <div class="flight-tab row">
                         <div class="persent-one">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <input type="text"  class="textboxstyle"  name="flyFrom" placeholder="From City or airport">
+                            <input type="text"  class="textboxstyle"  name="flyFrom" id="flyFrom" placeholder="From City or airport">
                         </div>
+                        <ul class="list-group" id="resultFlyFrom"></ul>
                         <div class="persent-one">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <input type="text"  class="textboxstyle"  name="flyTo" placeholder="To City or airport">
+                            <input type="text"  class="textboxstyle"  name="flyTo" id ="flyTo" placeholder="To City or airport">
                         </div>
                         <div class="persent-one less-per" >
                             <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -59,32 +62,33 @@
                     <!-- flight tab -->
                 </div>
                 <!-- tab 1 -->
-                <div id="2" class="tab1">
-                    <div class="flight-tab row">
-                        <div class="persent-one">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <input type="text" name="dep" class="textboxstyle" id="dep" placeholder="From City or airport">
-                        </div>
-                        <div class="persent-one">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <input type="text" name="dep" class="textboxstyle" id="arival" placeholder="To City or airport">
-                        </div>
-                        <div class="persent-one less-per">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <input type="text" name="dep" class="textboxstyle" id="from-date1" placeholder="Depart">
-                        </div>
-                        <div class="persent-one less-per">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <input type="text" name="dep" class="textboxstyle" id="to-date" placeholder="Returrn">
-                        </div>
-                        <div class="persent-one">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            <div class="textboxstyle" id="passenger">01 Passenger</div>
-                        </div>
-                        <div class="persent-one less-btn">
-                            <input type="Submit" name="submit" value="Search" class="btn btn-info cst-btn" id="srch">
-                        </div>
-                    </div>
+                <%--<div id="2" class="tab1">--%>
+                    <%--<div class="flight-tab row">--%>
+                        <%--<div class="persent-one">--%>
+                            <%--<i class="fa fa-map-marker" aria-hidden="true"></i>--%>
+                            <%--<input type="text" name="search" class="textboxstyle" id="dep" placeholder="From City or airport">--%>
+                        <%--</div>--%>
+                        <%--<div class="persent-one">--%>
+                            <%--<i class="fa fa-map-marker" aria-hidden="true"></i>--%>
+                            <%--<input type="text" name="search" class="textboxstyle" id="arival" placeholder="To City or airport">--%>
+                        <%--</div>--%>
+                        <%--<ul class="list-group" id="results"></ul>--%>
+                        <%--<div class="persent-one less-per">--%>
+                            <%--<i class="fa fa-calendar" aria-hidden="true"></i>--%>
+                            <%--<input type="text" name="dep" class="textboxstyle" id="from-date1" placeholder="Depart">--%>
+                        <%--</div>--%>
+                        <%--<div class="persent-one less-per">--%>
+                            <%--<i class="fa fa-calendar" aria-hidden="true"></i>--%>
+                            <%--<input type="text" name="dep" class="textboxstyle" id="to-date" placeholder="Returrn">--%>
+                        <%--</div>--%>
+                        <%--<div class="persent-one">--%>
+                            <%--<i class="fa fa-user" aria-hidden="true"></i>--%>
+                            <%--<div class="textboxstyle" id="passenger">01 Passenger</div>--%>
+                        <%--</div>--%>
+                        <%--<div class="persent-one less-btn">--%>
+                            <%--<input type="Submit" name="submit" value="Search" class="btn btn-info cst-btn" id="srch">--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
                     <!-- flight tab -->
                 </div>
                 <!-- tab 1 -->
@@ -95,5 +99,30 @@
     <!-- tabbing -->
 </div>
 </form>
+
 </body>
 </html>
+<script>
+    $(document).ready(function(){
+        $.ajaxSetup({ cache: false });
+        $('#flyFrom').keyup(function(){
+            $('#resultFlyFrom').html('');
+            var searchField = $('#flyFrom').val();
+            var expression = new RegExp(searchField, "i");
+            $.getJSON('airports.json', function(data) {
+                $.each(data, function(key, value){
+                    if (value.name.search(expression) != -1 || value.city.search(expression) != -1)
+                    {
+                        $('#resultFlyFrom').append('<li class="list-group-item link-class">'+value.name+' | <span class="text-muted">'+value.city+'</span></li>');
+                    }
+                });
+            });
+        });
+
+        $('#resultFlyFrom').on('click', 'li', function() {
+            var click_text = $(this).text().split('|');
+            $('#flyFrom').val($.trim(click_text[3]));
+            $("#resultFlyFrom").html('');
+        });
+    });
+</script>
