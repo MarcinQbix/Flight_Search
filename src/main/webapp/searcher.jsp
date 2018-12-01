@@ -25,26 +25,28 @@
 
 <body background="/photobackgroud.jpg">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<form action="/flightList" method="post">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
-        <div class="container">
-            <a class="navbar-brand" href="#">D&M Flight Search</a>
-            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-                &#9776;
-            </button>
-            <div class="collapse navbar-collapse" id="exCollapsingNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">More</a></li>
-                </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+    <div class="container">
+        <a class="navbar-brand" href="#">D&M Flight Search</a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+            &#9776;
+        </button>
+        <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">More</a></li>
+            </ul>
 
-                <a href="/login"> <button type="button"   class="btn btn-light">Login </button></a>
+            <a href="/login"> <button type="button"   class="btn btn-light">Login </button></a>
+            <a href="/logoff"> <button type="button"   class="btn btn-light">Logout </button></a>
 
-            </div>
         </div>
-    </nav>
+    </div>
+</nav>
+<form action="/flightList" method="post">
+
 
     <div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
