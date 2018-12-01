@@ -41,6 +41,7 @@
 
             <a href="/login"> <button type="button"   class="btn btn-light">Login </button></a>
             <a href="/logoff"> <button type="button"   class="btn btn-light">Logout </button></a>
+            <a href="/register"> <button type="button"   class="btn btn-light">Register </button></a>
 
         </div>
     </div>

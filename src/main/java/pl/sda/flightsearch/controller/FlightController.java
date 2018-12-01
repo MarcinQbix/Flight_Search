@@ -42,4 +42,7 @@ public class FlightController {
 
     @GetMapping("/login")
     public String showLogged(){return "login";}
+
+    @GetMapping("/register")
+    public String showRegister(){return "register";}
 }
