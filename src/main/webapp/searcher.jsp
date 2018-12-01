@@ -26,11 +26,41 @@
 <body background="/photobackgroud.jpg">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <form action="/flightList" method="post">
-    <div class="page-header">
-        <div>
-            <button>
-                <a href="/login.jsp">Loguj się</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#">D&M Flight Search</a>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                &#9776;
             </button>
+            <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">More</a></li>
+                </ul>
+
+                <a href="/login"> <button type="button"   class="btn btn-light">Login </button></a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Forgot password</h3>
+                    <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <p>Reset your password..</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                    <button class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
         </div>
     </div>
 <div class="flight-engine">
@@ -47,7 +77,6 @@
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <input type="text"  class="textboxstyle"  name="flyFrom" id="flyFrom" placeholder="From City or airport">
                         </div>
-                        <ul class="list-group" id="resultFlyFrom"></ul>
                         <div class="persent-one">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             <input type="text"  class="textboxstyle"  name="flyTo" id ="flyTo" placeholder="To City or airport">
@@ -75,35 +104,7 @@
 
                     <!-- flight tab -->
                 </div>
-                <!-- tab 1 -->
-                <%--<div id="2" class="tab1">--%>
-                    <%--<div class="flight-tab row">--%>
-                        <%--<div class="persent-one">--%>
-                            <%--<i class="fa fa-map-marker" aria-hidden="true"></i>--%>
-                            <%--<input type="text" name="search" class="textboxstyle" id="dep" placeholder="From City or airport">--%>
-                        <%--</div>--%>
-                        <%--<div class="persent-one">--%>
-                            <%--<i class="fa fa-map-marker" aria-hidden="true"></i>--%>
-                            <%--<input type="text" name="search" class="textboxstyle" id="arival" placeholder="To City or airport">--%>
-                        <%--</div>--%>
-                        <%--<ul class="list-group" id="results"></ul>--%>
-                        <%--<div class="persent-one less-per">--%>
-                            <%--<i class="fa fa-calendar" aria-hidden="true"></i>--%>
-                            <%--<input type="text" name="dep" class="textboxstyle" id="from-date1" placeholder="Depart">--%>
-                        <%--</div>--%>
-                        <%--<div class="persent-one less-per">--%>
-                            <%--<i class="fa fa-calendar" aria-hidden="true"></i>--%>
-                            <%--<input type="text" name="dep" class="textboxstyle" id="to-date" placeholder="Returrn">--%>
-                        <%--</div>--%>
-                        <%--<div class="persent-one">--%>
-                            <%--<i class="fa fa-user" aria-hidden="true"></i>--%>
-                            <%--<div class="textboxstyle" id="passenger">01 Passenger</div>--%>
-                        <%--</div>--%>
-                        <%--<div class="persent-one less-btn">--%>
-                            <%--<input type="Submit" name="submit" value="Search" class="btn btn-info cst-btn" id="srch">--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                    <!-- flight tab -->
+
                 </div>
                 <!-- tab 1 -->
             </div>
