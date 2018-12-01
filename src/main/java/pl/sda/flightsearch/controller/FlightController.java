@@ -43,4 +43,3 @@ public class FlightController {
     @GetMapping("/login")
     public String showLogged(){return "login";}
 }
-//to do komitu
