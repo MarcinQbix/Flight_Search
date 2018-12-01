@@ -23,7 +23,6 @@ public class FlightController {
 
     }
 
-
     @GetMapping("/")
     public String showSearcher() {
         return "searcher";
@@ -40,4 +39,7 @@ public class FlightController {
         model.addAttribute("flights", flightService.showAllFlights(flyFrom, flyTo, dateFrom, dateTo));
         return "result";
     }
+
+    @GetMapping("/login")
+    public String showLogged(){return "login";}
 }
