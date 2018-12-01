@@ -27,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers("/flightList").permitAll()
                 .antMatchers("/style.css").permitAll()
-                .antMatchers("/3889f45752d19449f909300bb0b7ad02.jpg").permitAll()
+                .antMatchers("/photobackgroud.jpg").permitAll()
                 .antMatchers("/images.jpg").permitAll()
                 .antMatchers("/listbackground.jpg").permitAll()
 
