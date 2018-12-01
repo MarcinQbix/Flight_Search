@@ -12,7 +12,13 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="style.css" rel="stylesheet" >
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://www.jqueryscript.net/demo/JSON-Autocomplete-Fuzzy-Search-jQuery-fuzzyComplete/fuse.min.js"></script>
+<script src="https://www.jqueryscript.net/demo/JSON-Autocomplete-Fuzzy-Search-jQuery-fuzzyComplete/dist/js/fuzzycomplete.min.js"></script>
+<script src="airports.js"></script>
 
 
 <!------ Include the above in your HEAD tag ---------->
@@ -20,6 +26,13 @@
 <body background="3889f45752d19449f909300bb0b7ad02.jpg">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <form action="/flightList" method="post">
+    <div class="page-header">
+        <div>
+            <button>
+                <a href="/login.jsp">Loguj się</a>
+            </button>
+        </div>
+    </div>
 <div class="flight-engine">
     <div class="container">
         <div class="tabing">
@@ -58,11 +71,7 @@
                         <div class="persent-one less-btn">
                             <input type="Submit" name="submit" value="Search" class="btn btn-info cst-btn" id="srch">
                         </div>
-                        <div>
-                            <button>
-                                <a href="/login.jsp">Loguj się</a>
-                            </button>
-                        </div>
+
 
                     <!-- flight tab -->
                 </div>
@@ -108,27 +117,3 @@
 
 </body>
 </html>
-<script>
-    $(document).ready(function(){
-        $.ajaxSetup({ cache: false });
-        $('#flyFrom').keyup(function(){
-            $('#resultFlyFrom').html('');
-            var searchField = $('#flyFrom').val();
-            var expression = new RegExp(searchField, "i");
-            $.getJSON('airports.json', function(data) {
-                $.each(data, function(key, value){
-                    if (value.name.search(expression) != -1 || value.city.search(expression) != -1)
-                    {
-                        $('#resultFlyFrom').append('<li class="list-group-item link-class">'+value.name+' | <span class="text-muted">'+value.city+'</span></li>');
-                    }
-                });
-            });
-        });
-
-        $('#resultFlyFrom').on('click', 'li', function() {
-            var click_text = $(this).text().split('|');
-            $('#flyFrom').val($.trim(click_text[3]));
-            $("#resultFlyFrom").html('');
-        });
-    });
-</script>
