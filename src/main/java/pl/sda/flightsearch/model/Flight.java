@@ -39,4 +39,6 @@ public class Flight {
     private Long aTimeUTC;
 
     private BigDecimal price;
+    private String direct_flights;
+
 }

@@ -37,4 +37,6 @@ public class FlightDTO {
 
     private BigDecimal price;
 
+    private String direct_flights;
+
 }

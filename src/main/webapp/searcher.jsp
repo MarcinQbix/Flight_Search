@@ -74,8 +74,10 @@
                 <label><input type="radio" name="modMainSearchFlightType"id="modMainSearchFlightReturn_radio"> w obie strony</label>
             </div>
             <div class="inner09" style="display:inline-block;">
-                <label><input type="checkbox" name="innerflight" value="1" id="innerFlight">Tylko Loty Bezpośrednie</label>
+                <label><input type="checkbox" name="direct_flights" value="1" id="direct_flights">Tylko Loty Bezpośrednie</label>
             </div>
+            <label for="dateFrom">Earliest Departure Date</label>
+            <label for="dateTo">Latest Depture Date</label>
             <div class="tab-content">
                 <div id="1" class="tab1 active">
                     <div class="flight-tab row">
@@ -107,8 +109,7 @@
                         <div class="persent-one less-btn">
                             <input type="Submit" name="submit" value="Search" class="btn btn-info cst-btn" id="srch">
                         </div>
-                        <label for="dateFrom">Earliest Departure Date</label>
-                        <label for="dateTo">Latest Depture Date</label>
+
 
 
                     <!-- flight tab -->
