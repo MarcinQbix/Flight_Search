@@ -46,7 +46,7 @@
         </div>
     </div>
 </nav>
-<form action="/flightList" method="post">
+<form action="/flightList" method="post" autocomplete="off">
 
 
     <div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
