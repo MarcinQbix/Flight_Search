@@ -6,9 +6,11 @@ import org.apache.http.impl.client.HttpClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
+@ComponentScan(basePackages = "pl.sda.flightsearch")
 @SpringBootApplication
 public class FlightSearchApplication {
 

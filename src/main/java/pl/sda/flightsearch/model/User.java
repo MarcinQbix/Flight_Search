@@ -11,10 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDate;
 
-@AllArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
 public class User {
     @Id
