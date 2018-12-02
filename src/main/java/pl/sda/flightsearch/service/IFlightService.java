@@ -9,6 +9,6 @@ import java.util.Date;
 import java.util.List;
 
 public interface IFlightService {
-    List<FlightDTO> showAllFlights(String flyFrom, String flyTo, LocalDate dateFrom, LocalDate dateTo,String direct_flights);
+    List<FlightDTO> showAllFlights(String flyFrom, String flyTo, LocalDate dateFrom, LocalDate dateTo,String direct_flights,Integer passangers);
 
 }

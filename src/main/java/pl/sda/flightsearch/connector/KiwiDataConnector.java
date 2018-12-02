@@ -22,7 +22,7 @@ public class KiwiDataConnector {
         this.restTemplate = restTemplate;
     }
 
-    public KiwiDataResponse connect(String flyFrom, String flyTo, LocalDate dateFrom, LocalDate dateTo,String direct_flights) {
+    public KiwiDataResponse connect(String flyFrom, String flyTo, LocalDate dateFrom, LocalDate dateTo,String direct_flights,Integer passengers) {
 ;
 
 
@@ -32,7 +32,8 @@ public class KiwiDataConnector {
                 .queryParam("dateFrom", dateFrom.format(DATE_PATTERN))
                 .queryParam("dateTo", dateTo.format(DATE_PATTERN))
                 .queryParam("partner",parnter)
-                .queryParam("direct_flights",direct_flights);
+                .queryParam("direct_flights",direct_flights)
+                .queryParam("passengers",passengers);
 
         return restTemplate.getForObject(builder.toUriString(), KiwiDataResponse.class);
     }

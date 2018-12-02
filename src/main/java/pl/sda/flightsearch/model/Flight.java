@@ -40,5 +40,6 @@ public class Flight {
 
     private BigDecimal price;
     private String direct_flights;
+    private Integer passengers;
 
 }

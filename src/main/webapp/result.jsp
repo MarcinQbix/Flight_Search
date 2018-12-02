@@ -12,7 +12,7 @@
         }
 
         #table-scroll {
-            height: 400px;
+            height: 520px;
             overflow: auto;
             margin-top: 20px;
         }
@@ -47,7 +47,7 @@
                         <th>Arrivial time</th>
                         <th>Airlanes</th>
                         <th>Fly Duration</th>
-                        <th>Price</th>
+                        <th>Total Price</th>
                         <th></th>
                     </tr>
                     </thead>
@@ -64,14 +64,15 @@
                             <td>${flight.airlines}</td>
                             <td>${flight.flyDuration}</td>
                             <td>${flight.price} EUR</td>
-                            <td><a href="${flight.deepLink}" type="button" class="btn btn-info">Go to booking</a></td>
+                            <td><a href="${flight.deepLink}" type="button" class="btn btn-info">Book!</a></td>
+                            <td><h href="" type="button" class="btn btn-danger">Add To Fav</h>  </td>
                         </tr>
                     </c:forEach>
                     </tbody>
                 </table>
             </div>
         </div>
-        <a href="/"><input type="button" class="btn btn-primary btn-lg" name="action" value="go back"></a>
+        <a href="/"><input type="button" class="btn btn-primary btn-lg" name="action" value="Go Back"></a>
     </form>
 </div>
 </body>

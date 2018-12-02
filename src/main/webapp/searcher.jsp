@@ -100,10 +100,11 @@
                         </div>
                         <div class="persent-one">
                             <i class="fa fa-user" aria-hidden="true"></i>
-                            <select class="textboxstyle" name="passangers">
-                                <option selected value="1">1 Passenger</option>
-                                <option value="2">2 Passengers</option>
-                                <option value="3">3 Passengers</option>
+                            <select class="textboxstyle" name="passengers">
+                                <option selected value=1>1 Passenger</option>
+                                <option value=2>2 Passengers</option>
+                                <option value=3>3 Passengers</option>
+                                <option value=4>4 Passangers</option>
                             </select>
                         </div>
                         <div class="persent-one less-btn">
