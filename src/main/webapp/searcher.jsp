@@ -10,7 +10,7 @@
 
 
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="style.css" rel="stylesheet" >
+<link href="css/style.css" rel="stylesheet" >
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -18,12 +18,12 @@
         crossorigin="anonymous"></script>
 <script src="https://www.jqueryscript.net/demo/JSON-Autocomplete-Fuzzy-Search-jQuery-fuzzyComplete/fuse.min.js"></script>
 <script src="https://www.jqueryscript.net/demo/JSON-Autocomplete-Fuzzy-Search-jQuery-fuzzyComplete/dist/js/fuzzycomplete.min.js"></script>
-<script src="airports.js"></script>
+<script src="js/airports.js"></script>
 
 
 <!------ Include the above in your HEAD tag ---------->
 
-<body background="/photobackgroud.jpg">
+<body background="/images/photobackgroud.jpg">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
     <div class="container">

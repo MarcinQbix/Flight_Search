@@ -16,6 +16,7 @@ import java.util.List;
 public class FlightDTO {
 
     private String flyTo;
+    private String deepLink;
 
     private List<String> airlines;
 

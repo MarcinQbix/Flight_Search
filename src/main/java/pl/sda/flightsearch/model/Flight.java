@@ -14,6 +14,9 @@ import java.util.List;
 public class Flight {
     private String flyTo;
 
+    @JsonProperty("deep_link")
+    private String deepLink;
+
     @JsonProperty("airlines")
     private List<String> airlines;
 

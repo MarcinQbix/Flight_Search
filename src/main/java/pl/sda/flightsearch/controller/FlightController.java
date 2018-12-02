@@ -5,10 +5,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import pl.sda.flightsearch.model.SearchParams;
 import pl.sda.flightsearch.service.FlightService;
 
 import java.time.LocalDate;
@@ -32,8 +30,8 @@ public class FlightController {
     public String listFlightView(
             @RequestParam String flyFrom,
             @RequestParam String flyTo,
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)LocalDate dateFrom,
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)LocalDate dateTo,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dateFrom,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dateTo,
             Model model
     ) {
         model.addAttribute("flights", flightService.showAllFlights(flyFrom, flyTo, dateFrom, dateTo));
@@ -41,8 +39,12 @@ public class FlightController {
     }
 
     @GetMapping("/login")
-    public String showLogged(){return "login";}
+    public String showLogged() {
+        return "login";
+    }
 
     @GetMapping("/register")
-    public String showRegister(){return "register";}
+    public String showRegister() {
+        return "register";
+    }
 }

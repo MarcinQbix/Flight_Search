@@ -31,6 +31,6 @@ private LocalDateTime paraser(Long timestamp){
         List<Flight> flights = kiwiDataConnector.connect(flyFrom,flyTo,dateFrom,dateTo).getFlights();
 
         return flights.stream()
-                .map(b->new FlightDTO(b.getFlyTo(),b.getAirlines(),b.getFlyDuration(),b.getFlyFrom(),paraser(b.getDTimeUTC()),b.getBookingToken(),b.getCityTo(),b.getCityFrom(),paraser(b.getATimeUTC()),b.getPrice())).collect(Collectors.toList());
+                .map(b->new FlightDTO(b.getFlyTo(),b.getDeepLink(),b.getAirlines(),b.getFlyDuration(),b.getFlyFrom(),paraser(b.getDTimeUTC()),b.getBookingToken(),b.getCityTo(),b.getCityFrom(),paraser(b.getATimeUTC()),b.getPrice())).collect(Collectors.toList());
     }
 }
