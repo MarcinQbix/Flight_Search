@@ -121,3 +121,14 @@
 
 </body>
 </html>
+<script>
+var fuseOptions = { keys: ["IATA", "city"] };
+var options = { display: "name", key: "IATA", fuseOptions: fuseOptions,resultsLimit:5 };
+
+$(document).ready(function(){
+$("#flyFrom").fuzzyComplete(airports, options);
+})
+$(document).ready(function(){
+$("#flyTo").fuzzyComplete(airports, options);
+})
+</script>
