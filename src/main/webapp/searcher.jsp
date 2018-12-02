@@ -74,7 +74,7 @@
                 <label><input type="radio" name="modMainSearchFlightType"id="modMainSearchFlightReturn_radio"> w obie strony</label>
             </div>
             <div class="inner09" style="display:inline-block;">
-                <label><input type="checkbox" name="innerflight" id="innerFlight">Tylko Loty Bezpośrednie</label>
+                <label><input type="checkbox" name="innerflight" value="1" id="innerFlight">Tylko Loty Bezpośrednie</label>
             </div>
             <div class="tab-content">
                 <div id="1" class="tab1 active">

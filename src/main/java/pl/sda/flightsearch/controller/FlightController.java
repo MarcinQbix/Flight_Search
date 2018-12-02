@@ -32,6 +32,7 @@ public class FlightController {
             @RequestParam String flyTo,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dateFrom,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dateTo,
+            @RequestParam(defaultValue = "0") String innerflight,
             Model model
     ) {
         model.addAttribute("flights", flightService.showAllFlights(flyFrom, flyTo, dateFrom, dateTo));
