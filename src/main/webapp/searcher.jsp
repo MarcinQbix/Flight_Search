@@ -138,3 +138,12 @@ $(document).ready(function(){
 $("#flyTo").fuzzyComplete(airports, options);
 })
 </script>
+<script>
+    $(document).ready(function () {
+        $('#dtVerticalScrollExample').DataTable({
+            "scrollY": "200px",
+            "scrollCollapse": true,
+        });
+        $('.dataTables_length').addClass('bs-select');
+    });
+</script>
