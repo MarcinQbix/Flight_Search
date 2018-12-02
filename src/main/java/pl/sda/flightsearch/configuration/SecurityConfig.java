@@ -25,21 +25,41 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/flightList").permitAll()
-                .antMatchers("/style.css").permitAll()
-                .antMatchers("/photobackgroud.jpg").permitAll()
-                .antMatchers("/images.jpg").permitAll()
-                .antMatchers("/listbackground.jpg").permitAll()
-
+                .antMatchers("/flightList","/style.css","/photobackgroud.jpg","/images.jpg","/listbackground.jpg","/airports.js","/register").permitAll()
 
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                .permitAll()
+        .and()
+        .logout()
+        .logoutSuccessUrl("/flightList")
                 .permitAll();
 
         http.csrf().disable();
     }
+
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http
+//                .authorizeRequests()
+//                .antMatchers("/", "/webapp/styles/login.css").permitAll()
+//                //.anyRequest().authenticated()
+//                .and()
+//                .formLogin()
+//                .loginPage("/loginForm")
+//                .permitAll()
+//                .and()
+//                .logout()
+//                .logoutUrl("/myLogout")
+//                .logoutSuccessUrl("/")
+//                .permitAll();
+//
+//        http.csrf().disable();
+//
+//    }
+
 
     @Override
     public void configure(WebSecurity web) throws Exception {
