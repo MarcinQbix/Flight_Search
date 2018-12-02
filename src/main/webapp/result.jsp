@@ -3,14 +3,14 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Your Search Results</title>
     <link href="${pageContext.request.contextPath}/webjars/bootstrap/4.0.0-2/css/bootstrap.css" type="text/css"
           rel="stylesheet">
 </head>
 <body background="images/listbackground.jpg">
 <div class="container mt-4">
     <form action="/flightList" method="post">
-        <table class="table table-hover">
+        <table class="table table-dark"style="background-color:rgba(0, 0, 0, 0.6);" >
             <thead>
             <tr>
                 <th>#</th>

@@ -73,6 +73,9 @@
                 <label><input type="radio"  checked="checked" name="modMainSearchFlightType" id="modMainSearchFlightOneway_radio"> w jedną stronę</label>
                 <label><input type="radio" name="modMainSearchFlightType"id="modMainSearchFlightReturn_radio"> w obie strony</label>
             </div>
+            <div class="inner09" style="display:inline-block;">
+                <label><input type="checkbox" name="innerflight" id="innerFlight">Tylko Loty Bezpośrednie</label>
+            </div>
             <div class="tab-content">
                 <div id="1" class="tab1 active">
                     <div class="flight-tab row">
@@ -86,11 +89,12 @@
                         </div>
                         <div class="persent-one less-per" >
                             <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <input type="date" name="dateFrom" class="textboxstyle" value="2018-11-24" placeholder="Depart">
+
+                          <input type="date" id="dateFrom" name="dateFrom" class="textboxstyle" value="Departure from"  placeholder="Depart">
                         </div>
                         <div class="persent-one less-per">
                             <i class="fa fa-calendar" aria-hidden="true"></i>
-                            <input type="date" name="dateTo" class="textboxstyle" placeholder="Returrn">
+                            <input type="date" id="dateTo" name="dateTo" class="textboxstyle" value="Departure to" placeholder="Returrn">
                         </div>
                         <div class="persent-one">
                             <i class="fa fa-user" aria-hidden="true"></i>
@@ -103,6 +107,8 @@
                         <div class="persent-one less-btn">
                             <input type="Submit" name="submit" value="Search" class="btn btn-info cst-btn" id="srch">
                         </div>
+                        <label for="dateFrom">Earliest Departure Date</label>
+                        <label for="dateTo">Latest Depture Date</label>
 
 
                     <!-- flight tab -->
