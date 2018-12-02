@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>D&M Simple Flight Searcher</title>
     <link href="${pageContext.request.contextPath}/webjars/bootstrap/4.0.0-2/css/bootstrap.css" type="text/css"
           rel="stylesheet">
 </head>
@@ -38,11 +38,11 @@
                 <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">More</a></li>
             </ul>
-
-            <a href="/login"> <button type="button"   class="btn btn-light">Login </button></a>
-            <a href="/logoff"> <button type="button"   class="btn btn-light">Logout </button></a>
-            <a href="/register"> <button type="button"   class="btn btn-light">Register </button></a>
-
+            <div class="topcorner">
+            <a href="/login"> <button type="button"   class="btn btn-warning">Login </button></a>
+            <a href="/logoff"> <button type="button"   class="btn btn-warning">Logout </button></a>
+            <a href="/register"> <button type="button"   class="btn btn-warning">Register </button></a>
+            </div>
         </div>
     </div>
 </nav>
